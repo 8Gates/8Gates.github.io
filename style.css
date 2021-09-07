@@ -92,7 +92,6 @@ th {
 }
 
 td{
-    text-align: left;
     color:lightcoral;
 }
 
@@ -102,22 +101,9 @@ td{
 
 .tableSpan{
     font-size: 24px;
-    text-align: center;
     color: lightgray;
-    border-radius: 30px;
-    border-style: groove;
-    border-width: 3px;
-    border-color:rgb(187 187 187);
-}
+    border: none;
 
-.tableRight{
-    font-size: 24px;
-    text-align: right;
-    color: lightgray;
-    border-radius: 30px;
-    border-style: groove;
-    border-width: 3px;
-    border-color:rgb(187 187 187);
 }
 
 .aboutPhotos{
