@@ -35,16 +35,22 @@ document.addEventListener('DOMContentLoaded', function(){
     const DS2 = "https://www.cheapshark.com/api/1.0/deals?title=DARKSOULSII"
     const borderlands2 = "https://www.cheapshark.com/api/1.0/deals?title=BORDERLANDS2"
 
-    httpGame(DS3, 1);
-    httpGame(DS2, 9)
-    httpGame(elderScrolls, 2);
-    httpGame(kidCham, 3);
-    httpGame(sonic2, 8)
-    httpGame(borderlands, 6);
-    httpGame(borderlands2, 10)
-    httpGame(unrealT, 4);
-    httpGame(deadSpace, 5);
-    httpGame(nierAutomata, 7);
+
+    try {
+        httpGame(DS3, 1);
+        httpGame(DS2, 9)
+        httpGame(elderScrolls, 2);
+        httpGame(kidCham, 3);
+        httpGame(sonic2, 8)
+        httpGame(borderlands, 6);
+        httpGame(borderlands2, 10)
+        httpGame(unrealT, 4);
+        httpGame(deadSpace, 5);
+        httpGame(nierAutomata, 7);
+    } catch (error) {
+        document.getElementById("tableError").style.display = "table-cell";
+    }
+
 });
 
 /*

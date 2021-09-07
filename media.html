@@ -120,8 +120,8 @@
         </div>
     </section>
 
-    <div class="container mb-5">
-        <table class="mt-5 mb-5 table table-dark">
+    <div class="container mt-5 mb-5">
+        <table id=gameTable class="mb-5 table table-dark">
             <col style="width:1%">
             <col style="width:10%">
             <col style="width:10%">
@@ -129,6 +129,8 @@
             <tr class="mt-5">
                 <th colspan="2" class="tableSpan">Recommended PC Games</th>
             </tr>
+            <tr class="text-warning"><td id=tableError colspan="3" style="border: none; display: none;">Error: A proxy may be preventing this API from functioning. Try 
+            a non-work PC.</td></tr>
             <tr>
                 <th class=leftCol></th>
                 <th></th>
@@ -186,8 +188,8 @@
             <tr>
                 <td class=browseThumb style="background-image:url('https://cdn.cloudflare.steamstatic.com/steam/apps/47780/capsule_sm_120.jpg?t=1614961955')"></td>
                 <td><a id=href5 target="_blank" href="#">Dead Space 2</a></td>
-                <td id=rating5>N/A</td>
-                <td id=price5>N/A</td>
+                <td id=rating5></td>
+                <td id=price5></td>
             </tr>
             <tr>
                 <td class=browseThumb style="background-image:url('https://cdn.cloudflare.steamstatic.com/steam/apps/524220/capsule_sm_120.jpg?t=1624266255')"></td>
