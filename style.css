@@ -92,6 +92,7 @@ th {
 }
 
 td{
+    text-align: left;
     color:lightcoral;
 }
 
@@ -101,6 +102,7 @@ td{
 
 .tableSpan{
     font-size: 24px;
+
     color: lightgray;
     border: none;
 
