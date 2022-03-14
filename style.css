@@ -142,3 +142,91 @@ td{
     float: left;
     margin-right: 10px;
 }
+
+:root{
+    --colorA: rgb(94, 94, 94);
+    --colorB: rgba(122, 239, 255, 0.897);
+    --colorC: rgba(0, 0, 0, 0.925);
+}
+
+.glitch{
+    font-size: 4rem;
+    font-family: 'Techno Board', sans-serif;
+    font-weight:  500;
+    position: relative;
+
+    text-shadow:
+        0.05em 0 0 var(--colorA),
+        -0.05em -0.025em 0 var(--colorB),
+        -0.025em 0.05em 0 var(--colorC);
+
+    animation: glitch 500ms infinite;
+    animation: blinker 1s ease-in infinite;
+}
+
+.glitch span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.glitch span:first-child {
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translate(-0.025em, -0.04em);
+    opacity: 0.8;
+}
+.glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 100%);
+    transform: translate(0.0125em, 0.03em);
+    opacity: 0.8;
+}
+
+@keyframes blinker {
+    40% {
+      opacity: 50%;
+    }
+  }
+
+@keyframes glitch{
+    0% {
+        text-shadow: 0.05em 0 0 var(--colorA),
+        -0.05em -0.025em 0 var(--colorB),
+        -0.025em 0.05em 0 var(--colorC);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 var(--colorA),
+        -0.05em -0.025em 0 var(--colorB),
+        -0.025em 0.05em 0 var(--colorC);
+    }
+    15% {
+        text-shadow:
+        -0.05em -0.025em 0 var(--colorA),
+        0.025em 0.025em 0 var(--colorB),
+        -0.05em -0.05em 0 var(--colorC);
+    }
+    49% {
+        text-shadow:
+        -0.05em -0.025em 0 var(--colorA),
+        0.025em 0.025em 0 var(--colorB),
+        -0.05em -0.05em 0 var(--colorC);
+    }
+    50% {
+        text-shadow:
+        0.025em 0.05em 0 var(--colorA),
+        0.05em  0 0 var(--colorB),
+        0 -0.05em 0 var(--colorC);
+    }
+    99% {
+        text-shadow:
+        0.025em 0.05em 0 var(--colorA),
+        0.05em  0 0 var(--colorB),
+        0 -0.05em 0 var(--colorC);
+    }
+    100% {
+        text-shadow:
+        -0.025em 0 0 var(--colorA),
+        -0.025em -0.05em 0 var(--colorB),
+        -0.025em -0.05em 0 var(--colorC);
+    }
+}
